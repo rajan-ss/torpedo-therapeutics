@@ -60,6 +60,10 @@
             @include media-breakpoint-up(sm) {
                 @include font-size(1.0625rem);
             }
+
+            @include media-breakpoint-up(md) {
+                color: $white;
+            }
         }
 
 
@@ -97,6 +101,14 @@
 
             @include media-breakpoint-up(xxl) {
                 margin-top: 4.375rem;
+            }
+        }
+    }
+
+    &.overlay-dark {
+        &:before {
+            @include media-breakpoint-down(sm) {
+                display: none;
             }
         }
     }

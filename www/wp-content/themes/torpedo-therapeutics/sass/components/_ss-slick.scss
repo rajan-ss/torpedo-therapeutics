@@ -1,0 +1,24 @@
+
+//slick default
+
+.arrows-none {
+    .slick-arrow {
+        display: none !important;
+    }
+}
+
+.dots-none {
+    padding-bottom: 3.75rem;
+
+    .slick-dots {
+        display: none !important;
+    }
+}
+
+.slick-dots {
+    li {
+        &:only-child {
+            display: none;
+        }
+    }
+}

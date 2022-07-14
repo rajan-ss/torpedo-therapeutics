@@ -1,0 +1,20 @@
+// Mixin
+@mixin font-face( $font-name, $font-path, $font-weight: 400, $font-style: normal){
+	@font-face {
+		font-family: $font-name;
+		font-style : $font-style;
+		font-weight: $font-weight;
+		src: url('#{$font-path}.eot');
+		src: url('#{$font-path}.eot?#iefix') format('embedded-opentype'),
+			url('#{$font-path}.woff2') format('woff2'),
+			url('#{$font-path}.woff') format('woff'),
+			url('#{$font-path}.ttf') format('truetype');
+	}
+}
+
+// Usage
+// Normal style
+@include font-face("SmartSitesFont", '#{$font-path}/filename', 400, normal);
+
+// Italic style
+@include font-face("SmartSitesFont", '#{$font-path}/filename', 400, italic);

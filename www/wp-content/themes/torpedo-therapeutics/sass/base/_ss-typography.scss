@@ -1,0 +1,47 @@
+// Typography
+
+h2 {
+    span {
+        font-weight: 500;
+    }
+}
+
+.title {
+
+    &-block {
+
+        h2,
+        h3 {
+            color: $gray-800;
+        }
+    }
+
+    &-fancy {
+        display: inline-block;
+        font-weight: 500;
+        color: $black;
+        @include font-size(0.875rem);
+        letter-spacing: 10px;
+        margin-bottom: 0.75rem;
+        position: relative;
+    }
+
+    &-border {
+        padding: 0 .5rem;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 100%;
+            width: 60px;
+            height: 1px;
+            background-color: $primary;
+
+            @include media-breakpoint-up(lg) {
+                width: 115px; 
+            }
+        }
+    }
+}

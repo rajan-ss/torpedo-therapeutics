@@ -1,0 +1,58 @@
+//text-icon
+.text-icon {
+    padding: 1.2rem;
+    @include font-size(1.125rem);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-up(xl) {
+        padding: 3rem 1rem;
+    }
+
+    .img-circle {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 50%;
+            left: 50%;
+            bottom: 50%;
+            transition: .2s all ease-in-out;
+        }
+    }
+
+    &:hover {
+        .img-circle {
+            transform: rotate(-360deg);
+
+            &::before {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                border: 1px solid $gray-800;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    h3,
+    .h3 {
+        color: $gray-800;
+    }
+}
+
+.img-circle {
+    width: 70px;
+    height: 70px;
+    padding: 1rem;
+    background-color: $blue-100;
+    border-radius: 50%;
+    display: inline-block;
+    transition: .2s all ease-in-out;
+    border: 1px solid transparent;
+    text-align: center;
+}

@@ -1,0 +1,137 @@
+// Background Cover
+%bg-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&>img {
+		display: none;
+	}
+}
+
+.bg-cover {
+	@extend %bg-cover;
+}
+
+%bg-primary {
+	color: $white;
+	background: $primary;
+}
+
+.bg-primary {
+	@extend %bg-primary;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// Fonts
+%font-poppins {
+	font-family: $font-poppins;
+}
+
+.font-poppins {
+	@extend %font-poppins;
+}
+
+// Visibility
+.hide-sm {
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}
+
+// List
+ol {
+	padding-left: 0.9375rem;
+}
+
+// Text
+.text-transform-none {
+	text-transform: none !important;
+}
+
+.text-underline {
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@for $i from 1 through 9 {
+	.font-#{$i*100} {
+		font-weight: $i*100;
+	}
+}
+
+// a:visited {
+// 	color: $primary;
+// }
+
+picture {
+	display: block;
+}
+
+.mh-xl {
+
+	@include media-breakpoint-up(xl) {
+		min-height: 600px;
+	}
+
+	@media screen and (min-width:0\0) {
+		height: 600px;
+	}
+
+}
+
+.mh-xxl {
+
+	@include media-breakpoint-up(xxl) {
+		min-height: 900px;
+	}
+
+	@media screen and (min-width:0\0) {
+		height: 900px;
+	}
+}
+
+.bg-cyan {
+	background-color: $cyan;
+}
+
+.hidden {
+	position: absolute;
+	top: -999px;
+	left: -999px;
+}
+
+.overlay-light,
+.overlay-dark {
+	position: relative;
+	z-index: 1;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+}
+
+.overlay-light {
+	&:before {
+		background-color: rgba($white, .3);
+	}
+}
+
+.overlay-dark {
+	&:before {
+		background-color: rgba($black, .2);
+	}
+}

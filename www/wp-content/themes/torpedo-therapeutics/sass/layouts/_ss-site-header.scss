@@ -1,0 +1,151 @@
+// Site Header
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+
+    &.sticky {
+        background-color: $white;
+        box-shadow: 0 .625rem 1.375rem rgba($black, .07);
+
+        .navbar {
+
+            @include media-breakpoint-up(lg) {
+                padding: 1rem;
+            }
+
+            &-brand {
+
+                &-link {
+
+                    @include media-breakpoint-up(md) {
+                        max-width: 13.3125rem;
+                    }
+                }
+            }
+
+            &-nav {
+
+                .nav {
+
+                    &-item {
+
+                        @include media-breakpoint-up(xl) {
+                            margin-right: 2rem;
+                        }
+                    }
+
+                    &-link {
+
+                        @include media-breakpoint-up(xl) {
+                            color: $black;
+                            @include font-size(1.0625rem);
+                        }
+                    }
+                }
+
+                .menu-item-has-children {
+
+                    @include media-breakpoint-up(xl) {
+                        .caret {
+                            color: $black;
+
+                            &:before {
+                                border-color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .dropdown-menu {
+
+                .menu-item-has-children {
+
+                    @include media-breakpoint-up(xl) {
+                        .caret {
+                            color: $white;
+
+                            &:before {
+                                border-color: $white;
+                            }
+                        }
+
+                        &:hover {
+
+                            .caret {
+                                color: $primary;
+
+                                &:before {
+                                    border-color: $primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn-tertiary {
+
+            @include media-breakpoint-up(lg) {
+                color: $white;
+                background-color: $primary;
+
+                &:hover {
+                    background-color: $white;
+                    color: $primary;
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+
+    .navbar {
+
+        &-brand {
+
+            &-link {
+                max-width: 9.3125rem;
+                transition: all .2s;
+
+                @include media-breakpoint-up(sm) {
+                    max-width: 13.3125rem;
+                }
+
+                @include media-breakpoint-up(md) {
+                    max-width: 16.3125rem;
+                }
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .btn-tertiary {
+
+            @include media-breakpoint-down(md) {
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                border-radius: 0;
+                background-color: $primary;
+                color: $white;
+                border: 0;
+                border-top: 1px solid transparent;
+
+                &:hover {
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+}

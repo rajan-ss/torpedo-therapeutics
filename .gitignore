@@ -1,0 +1,27 @@
+#IDE
+/nbproject
+/.idea
+
+#WordPress
+/www/.htaccess
+/www/wp-config.php
+/www/wp-content/cache/
+/www/wp-content/uploads/
+/www/wp-snapshots/
+#Sometimes WP configured to have "media" as "uploads" folder
+/www/media/
+
+#robots
+/www/robots.txt
+*.DS_Store
+
+/www/wp-content/wflogs/
+
+#logs
+error_log
+
+*.zip
+
+#node-modules
+node_modules/
+/www/wp-content/themes/torpedo-therapeutics/node_modules

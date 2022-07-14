@@ -1,0 +1,46 @@
+// Site Footer
+.site-footer {
+	background-position: bottom;
+
+	@include media-breakpoint-down(md) {
+		margin-bottom: 3.0625rem;
+	}
+
+	h2,
+	h2.h1 {
+		letter-spacing: 1px;
+
+		@include media-breakpoint-down(xl) {
+			@include font-size($h2-font-size);
+		}
+	}
+
+	.inner {
+		.content-wrap {
+			padding-top: 3rem;
+
+			@include media-breakpoint-up(lg) {
+				padding-top: 6rem;
+			}
+
+			@include media-breakpoint-up(xl) {
+				padding-top: 15%;
+			}
+
+			@include media-breakpoint-up(xxl) {
+				padding-top: 28%;
+			}
+		}
+	}
+
+	.legal {
+		text-transform: capitalize;
+		@include font-size(1.0625rem);
+		font-weight: 300;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+}
